@@ -1,0 +1,69 @@
+
+//algorithme pour calculer les elemnnts idetiques dans  deux tableaux solution 1
+
+ALGORITHM Sumtab
+VAR
+    i,j : integer;
+    somme:integer;
+
+     somme1:integer;
+    n,m:integer;
+  t1:Array [1..50]of integer;
+ t2:Array [1..50]of integer;
+
+BEGIN
+  Write('donner la longueur du tableau 1    ')     ;
+ read (n);
+ Write('donner la longueur du tableau 2     ')   ;
+ read (m);
+ //lecture du Elements du tableau 
+ 				for i:=1 to n do
+				begin
+
+ write('t1[',i,']=');
+ readln(t1[i]);
+ end;
+
+ for j:=0 to m do
+ begin
+
+ write('t2[',j,']=');
+ readln(t2[j]);
+ end;
+ // affichage des elements du tableau 
+ for i:=0 to n do
+ begin
+
+ Write(t1[i]);
+
+
+ end;
+
+ for j:=0 to m do
+ begin
+
+
+ Write(t2[j]);
+// calcul et affichage des elements identiques
+		somme:=0;
+		somme1:=0;
+
+ for i:=0 to n do
+ begin
+ for j:=0 to m do
+ begin
+ if t1[i]=t2[j]  Then     
+ somme1 :=somme1+t2[j];
+ end;
+ end;
+ somme:=2*somme1;
+ write (somme);
+ 
+
+
+
+
+
+
+
+END
