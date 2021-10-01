@@ -1,0 +1,38 @@
+
+
+ALGORITHM text_analyze
+VAR
+    c : CHAR := '';
+    nb_char : INTEGER := 0;
+  Cpm:integer;
+ phrase:string;
+ i,d,j:integer;
+
+BEGIN
+   REPEAT
+        write("entrer une phrase ");
+    read(phrase)
+
+   UNTIL (phrase[phrase.length-1] =".")
+ 
+
+FOR i FROM 1 TO len (phrase) STEP step  DO 
+if (phrase[i]=" ") THEN;
+CPM = CPM+1;
+write (CPM);
+END_FOR
+
+FOR j FROM 1 TO len (phrase) STEP step  DO 
+if (phrase[j]='a' or phrase[j]='e' or phrase[j]='o' or phrase[j]='u' or phrase[j]='y' or phrase[j]='b' or phrase[j]='b')THEN
+cp:=cp+1;
+write (cp);
+
+END_FOR
+
+FOR d FROM 1 TO len (phrase) STEP step  DO 
+nbl:nbl+1;
+write (nbl);
+
+END_FOR
+
+END
