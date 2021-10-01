@@ -1,0 +1,40 @@
+VAR
+   tab1 : ARRAY_OF INTEGER[10];
+    tab2: ARRAY_OF INTEGER[15];
+        tab3: ARRAY_OF INTEGER[10];
+
+    i:= INTEGER= 0;
+    j:= INTEGER= 0;
+        k:INTEGER:=0;
+
+    sum:= INTEGER= 0;
+     count:INTEGER:= 1;
+    hash:HASH_TABLE<INTEGER,INTEGER>;
+
+
+
+  
+
+
+BEGIN
+    FOR i FROM 0 TO tab1.length-1 STEP step  DO
+        hash.insert(tab1[i],count);
+      
+    END_FOR
+    FOR j FROM 0 TO tab2.length-1 STEP step  DO
+       
+        IF (hash.lookup(tab2[j])=true) THEN
+            count:= hash.get(tab2[j]);
+            hash.insert(tab2[j], count+1);
+
+        ELSE 
+            hash.insert(tab2[j],1)    
+        END_IF
+    END_FOR
+    tab3:= hash.getkeys()
+    FOR k FROM 0 TO tab3.length-1 STEP step  DO
+        IF (hash.get(t[k])>1) THEN
+            sum= sum + tab3[k]
+        END_IF
+    END_FOR
+END
