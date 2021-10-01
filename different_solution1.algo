@@ -1,0 +1,40 @@
+VAR
+    tab1 : ARRAY_OF INTEGER[10];
+    tab2 : ARRAY_OF INTEGER[15]; 
+    i:= INTEGER= 0;
+    j:= INTEGER= 0;
+    sum:= INTEGER= 0;
+   test:=BOOLEAN;
+BEGIN
+    FOR i FROM 0 TO length.tab1 STEP step  DO
+        Write("Enter la taille du premier  tableau", tab1[i]);
+        Read(tab1[i]);
+    END_FOR
+    FOR j FROM 0 TO length.tab2 STEP step  DO
+        Write("entrer la taiille du dexième tableau", tab2[j]);
+        Read(tab2[j]);
+    END_FOR
+    FOR i FROM 0 TO length.tab1 STEP step  DO
+        test:= true;
+        FOR j FROM 0 TO length.tab2 STEP step  DO
+            IF(tab1[i]= tab2[j]) THEN
+            test:= false;
+            END_IF
+
+        END_FOR
+        IF (test= true) THEN
+        sum := sum+tab1[i];
+        END_IF
+    END_FOR
+    FOR j FROM 0 TO length.tab2[j] STEP step  DO
+        test:= true;
+        FOR i FROM 0 TO length.tab1[i] STEP step  DO
+            IF (tab2[j]=tab1[i]) THEN
+            test:=false;
+            END_IF
+        END_FOR
+        IF (test=true) THEN
+        sum:=sum+tab2[j]
+        END_IF
+    END_FOR
+END
